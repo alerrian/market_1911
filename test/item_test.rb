@@ -1,3 +1,5 @@
+require 'Minitest/autorun'
+require 'Minitest/pride'
 require_relative '../lib/item'
 
 class ItemTest < Minitest::Test

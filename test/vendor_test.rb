@@ -1,3 +1,5 @@
+require 'Minitest/autorun'
+require 'Minitest/pride'
 require_relative '../lib/vendor'
 require_relative '../lib/item'
 
