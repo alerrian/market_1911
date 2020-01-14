@@ -19,4 +19,12 @@ class Market
       vendor if vendor.inventory.find { |items| items[0].name == item.name }
     end.compact
   end
+
+  def sorted_item_list
+    @vendors.map do |vendor|
+      vendor.inventory.keys.map do |item|
+        item.name
+      end
+    end.flatten.uniq.sort
+  end
 end

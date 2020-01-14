@@ -69,6 +69,6 @@ class MarketTest < Minitest::Test
       'Tomato'
     ]
 
-    asssert_equal expected, @market.sorted_item_list
+    assert_equal expected, @market.sorted_item_list
   end
 end
