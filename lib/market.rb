@@ -19,4 +19,6 @@ class Market
       vendor if vendor.inventory.find { |inventory| inventory[0].name == item.name }
     end.compact
   end
+
+  
 end

@@ -54,5 +54,6 @@ class MarketTest < Minitest::Test
     @market.add_vendor(@vendor3)
 
     assert_equal [@vendor1, @vendor3], @market.vendors_that_sell(@item1)
+    assert_equal [@vendor2], @market.vendors_that_sell(@item4)
   end
 end
