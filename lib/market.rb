@@ -43,11 +43,10 @@ class Market
     return false if amount > total_inventory[item]
 
     vendors_that_sell(item).each do |vendor|
-      # require 'pry'; binding.pry
+      carry_over = leftover
       leftover -= vendor.inventory[item]
-      vendor.inventory[item] -= amount
+      vendor.inventory[item] -= carry_over
 
-      # require 'pry'; binding.pry
       vendor.inventory[item] = 0 if vendor.inventory[item] <= 0
     end
 
