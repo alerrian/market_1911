@@ -36,5 +36,7 @@ class VendorTest < Minitest::Test
     @vendor.add_stock(@item2, 12)
 
     assert_equal 12, @vendor.check_stock(@item2)
+
+    assert_equal ({@item1 => 55, @item2 => 12}), @vendor.inventory
   end
 end
