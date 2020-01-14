@@ -17,7 +17,7 @@ class MarketTest < Minitest::Test
   end
 
   def test_a_market_exists
-    assert_isntance_of Market, @market
+    assert_instance_of Market, @market
   end
 
   def test_a_market_has_attributes
