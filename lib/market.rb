@@ -16,9 +16,7 @@ class Market
 
   def vendors_that_sell(item)
     @vendors.map do |vendor|
-      vendor if vendor.inventory.find { |inventory| inventory[0].name == item.name }
+      vendor if vendor.inventory.find { |items| items[0].name == item.name }
     end.compact
   end
-
-  
 end
