@@ -37,4 +37,18 @@ class Market
       total
     end
   end
+
+  def sell(item, amount)
+    return false if amount > total_inventory[item]
+
+    vendors_that_sell(item).each do |vendor|
+      vendor.inventory.each do |thing|
+        if thing[0].name == item.name
+          vendor.inventory[item] -= amount
+        end
+      end
+    end
+
+    true
+  end
 end
