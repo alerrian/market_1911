@@ -30,7 +30,11 @@ class Market
 
   def total_inventory
     @vendors.inject(Hash.new(0)) do |total, vendor|
-      require 'pry'; binding.pry
+      vendor.inventory.each do |item, amount|
+        total[item] += amount
+      end
+
+      total
     end
   end
 end

@@ -80,8 +80,8 @@ class MarketTest < Minitest::Test
     expected = {
       @item1 => 100,
       @item2 => 7,
-      @item3 => 50,
-      @item4 => 25
+      @item4 => 50,
+      @item3 => 25
     }
 
     assert_equal expected, @market.total_inventory
