@@ -27,4 +27,10 @@ class Market
       end
     end.flatten.uniq.sort
   end
+
+  def total_inventory
+    @vendors.inject(Hash.new(0)) do |total, vendor|
+      require 'pry'; binding.pry
+    end
+  end
 end
